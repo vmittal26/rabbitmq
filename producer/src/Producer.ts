@@ -4,7 +4,7 @@ export class Producer {
   private channel: Channel | null = null;
 
   async createChannel() {
-    const connection = await amqp.connect("amqp://localhost:5672");
+    const connection = await amqp.connect("amqp://rabbitmq-server.thankfulrock-9b69544f.centralindia.azurecontainerapps.io");
 
     console.log('connection established');
     this.channel = await connection.createChannel();
